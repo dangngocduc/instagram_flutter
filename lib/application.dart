@@ -16,27 +16,44 @@ class _ApplicationState extends State<Application> {
   @override
   void initState() {
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-      statusBarIconBrightness: Brightness.light,
-      statusBarColor: Colors.black
-    ));
+
   }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
+        primaryColor: Colors.white,
+        accentColor: Colors.black,
+        accentColorBrightness: Brightness.dark,
+        bottomAppBarColor: Colors.white,
+        accentIconTheme: IconThemeData(
+          color: Colors.black
+        ),
+        cardColor: Colors.white,
+        backgroundColor: Colors.grey[200],
+        scaffoldBackgroundColor: Colors.grey[200],
+        colorScheme: ColorScheme.light(
+            onPrimary: Colors.black
+        )
+
+      ),
+      darkTheme: ThemeData.dark().copyWith(
         primaryColor: Colors.black,
         accentColor: Colors.white,
         accentColorBrightness: Brightness.light,
         bottomAppBarColor: Colors.black87,
         accentIconTheme: IconThemeData(
-          color: Colors.white
+            color: Colors.white
         ),
         cardColor: Color(0xFF121212),
         backgroundColor: Colors.black54,
         scaffoldBackgroundColor: Color(0xFF121212),
+        colorScheme: ColorScheme.dark(
+          onPrimary: Colors.white
+        )
       ),
+      themeMode: ThemeMode.system,
       home: MainPage(),
     );
   }

@@ -16,6 +16,7 @@ class _HomeStoryWidgetState extends State<HomeStoryWidget> {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 96,
+      color: Theme.of(context).cardColor,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => StoryItemWidget(),

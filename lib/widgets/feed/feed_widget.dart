@@ -12,6 +12,11 @@ class FeedWidget extends StatelessWidget {
     return Material(
       color: Theme.of(context).cardColor,
       child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            top: Divider.createBorderSide(context)
+          )
+        ),
         padding: EdgeInsets.only(
             bottom: 8
         ),

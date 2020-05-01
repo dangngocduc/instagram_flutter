@@ -23,6 +23,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
         ],
       ),
       bottomNavigationBar: Material(
+        elevation: 4,
         color: Theme.of(context).bottomAppBarColor,
         child: SafeArea(
           child: Container(

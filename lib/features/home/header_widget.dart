@@ -10,6 +10,7 @@ class HeaderWidget extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Theme.of(context).primaryColor,
+      elevation: 2,
       child: SafeArea(
         child: Container(
           child: Row(
