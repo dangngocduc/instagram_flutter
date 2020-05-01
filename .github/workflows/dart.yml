@@ -30,8 +30,15 @@ jobs:
           channel: 'dev' # or: 'dev' or 'beta'
       - run: flutter pub get
       - run: flutter build apk
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
+      - name: changelog
+        uses: scottbrenner/generate-changelog-action@master
+        id: Changelog
+        env:
+          REPO: ${{ github.repository }}
+      - name: Action Release
+        uses: yakuhzi/action-release@v1.2.0
         with:
-          name: build-android
-          path: build/app/outputs/apk/release/app-release.apk
+          file: build/app/outputs/apk/release/app-release.apk
+          changelogs: ${{ steps.Changelog.outputs.changelog }}
+   
+      
