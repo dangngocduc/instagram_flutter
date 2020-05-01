@@ -32,7 +32,10 @@ class _MainPageState extends State<MainPage> {
     } else {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
           statusBarIconBrightness: Brightness.dark,
-          statusBarColor: Colors.white
+          statusBarColor: Colors.white,
+          systemNavigationBarColor: Colors.white,
+          systemNavigationBarIconBrightness: Brightness.dark,
+          systemNavigationBarDividerColor: Colors.grey
       ));
     }
   }
