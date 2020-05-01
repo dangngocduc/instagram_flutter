@@ -38,6 +38,7 @@ jobs:
       - name: Action Release
         uses: yakuhzi/action-release@v1.2.0
         with:
+          tag_name: ${{ github.ref }}
           file: build/app/outputs/apk/release/app-release.apk
           changelogs: ${{ steps.Changelog.outputs.changelog }}
    
