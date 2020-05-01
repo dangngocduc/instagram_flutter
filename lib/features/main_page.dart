@@ -13,10 +13,19 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   static const TAG = 'MainPage';
+  PageController _pageController;
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: 1);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
+        controller: _pageController,
         children: <Widget>[
           CameraPge(),
           BottomNavPage(),

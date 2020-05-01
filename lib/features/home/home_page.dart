@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagramflutter/widgets/feed/feed_widget.dart';
+import 'package:instagramflutter/widgets/story/home_story_widget.dart';
 import 'dart:developer' as developer;
 
 import 'header_widget.dart';
@@ -15,9 +17,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HeaderWidget(),
-      body: Container(
+      body: RefreshIndicator(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                HomeStoryWidget(),
+                FeedWidget(),
+                FeedWidget()
+              ],
+            ),
+          ),
+          onRefresh: () async {
 
-      ),
+          }),
     );
   }
 }

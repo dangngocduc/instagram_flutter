@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:instagramflutter/features/home/home_page.dart';
+import 'package:instagramflutter/res/icons_app.dart';
 import 'dart:developer' as developer;
 
 import 'bottom_navigation_item.dart';
@@ -29,7 +31,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
               children: <Widget>[
                 Expanded(
                   child: BottomNavigationItem(
-                      Icon(Icons.home)
+                      SvgPicture.asset(IconsApp.icHome, color: Theme.of(context).accentIconTheme.color,)
                   ),
                 ),
                 Expanded(
