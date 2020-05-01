@@ -1,6 +1,6 @@
 # Instagram Flutter Demo
 
 
-|Demo | Design |
+|Demo | Demo |
 |----|:----|
-|`Home`|![](./demo/home_page.jpg)|
+|![](./demo/home_page.jpg)|![](./demo/home_page.jpg)|
