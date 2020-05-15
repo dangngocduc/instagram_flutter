@@ -30,12 +30,20 @@ class _ApplicationState extends State<Application> {
         accentIconTheme: IconThemeData(
           color: Colors.black
         ),
+        appBarTheme: AppBarTheme(
+          brightness: Brightness.light,
+          iconTheme: IconThemeData(
+            color: Colors.black
+          )
+        ),
+        primaryTextTheme: ThemeData.light().textTheme,
+        brightness: Brightness.light,
         cardColor: Colors.white,
         backgroundColor: Colors.grey[200],
         scaffoldBackgroundColor: Colors.grey[200],
         colorScheme: ColorScheme.light(
             onPrimary: Colors.black
-        )
+        ),
 
       ),
       darkTheme: ThemeData.dark().copyWith(

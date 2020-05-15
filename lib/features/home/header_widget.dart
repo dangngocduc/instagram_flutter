@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:developer' as developer;
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:instagramflutter/features/direct/direct_page.dart';
 import 'package:instagramflutter/res/icons_app.dart';
 
 class HeaderWidget extends StatelessWidget with PreferredSizeWidget {
@@ -22,7 +24,9 @@ class HeaderWidget extends StatelessWidget with PreferredSizeWidget {
                   color: Theme.of(context).colorScheme.onPrimary,),
               )),
               IconButton(icon: SvgPicture.asset(IconsApp.icSend,
-                color: Theme.of(context).colorScheme.onPrimary,), onPressed: (){})
+                color: Theme.of(context).colorScheme.onPrimary,), onPressed: (){
+                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => DirectPage()));
+              })
             ],
           ),
         ),
