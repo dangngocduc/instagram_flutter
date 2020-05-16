@@ -14,13 +14,17 @@ class _ActivityPageState extends State<ActivityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Activity'),
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => ActivityItemWidget(),
-        itemCount: 20,
-      ),
+      body: RefreshIndicator(
+          child: ListView.builder(
+            physics: BouncingScrollPhysics(),
+            itemBuilder: (context, index) => ActivityItemWidget(),
+            itemCount: 20,
+          ),
+          onRefresh: () async {}),
     );
   }
 }

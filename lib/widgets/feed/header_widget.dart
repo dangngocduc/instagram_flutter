@@ -26,7 +26,11 @@ class HeaderWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('dangngocduc', style: Theme.of(context).textTheme.bodyText2,),
+                  DefaultTextStyle(
+                      style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        fontWeight: FontWeight.w600
+                      ),
+                      child: Text('dangngocduc'),),
                   Text('Hà Nội, Viêt Nam', style: Theme.of(context).textTheme.caption,)
                 ],
               ),

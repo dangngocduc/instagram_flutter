@@ -30,11 +30,10 @@ class _ApplicationState extends State<Application> {
         accentIconTheme: IconThemeData(
           color: Colors.black
         ),
-        appBarTheme: AppBarTheme(
-          brightness: Brightness.light,
-          iconTheme: IconThemeData(
+        primaryColorBrightness: Brightness.light,
+        primaryColorDark: Colors.black87,
+        primaryIconTheme: IconThemeData(
             color: Colors.black
-          )
         ),
         primaryTextTheme: ThemeData.light().textTheme,
         brightness: Brightness.light,
@@ -44,7 +43,13 @@ class _ApplicationState extends State<Application> {
         colorScheme: ColorScheme.light(
             onPrimary: Colors.black
         ),
-
+        textTheme: ThemeData.light().textTheme.copyWith(
+          caption: ThemeData.light().textTheme.caption.copyWith(
+            color: Colors.black54,
+            fontSize: 10,
+            fontWeight: FontWeight.w500
+          )
+        )
       ),
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: Colors.black,
@@ -59,6 +64,13 @@ class _ApplicationState extends State<Application> {
         scaffoldBackgroundColor: Color(0xFF121212),
         colorScheme: ColorScheme.dark(
           onPrimary: Colors.white
+        ),
+        textTheme: ThemeData.dark().textTheme.copyWith(
+            caption: ThemeData.dark().textTheme.caption.copyWith(
+                color: Colors.white54,
+                fontSize: 10,
+                fontWeight: FontWeight.w500
+            )
         )
       ),
       themeMode: ThemeMode.system,
