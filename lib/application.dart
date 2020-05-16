@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:developer' as developer;
 
 import 'package:instagramflutter/features/main_page.dart';
@@ -35,7 +36,6 @@ class _ApplicationState extends State<Application> {
         primaryIconTheme: IconThemeData(
             color: Colors.black
         ),
-        primaryTextTheme: ThemeData.light().textTheme,
         brightness: Brightness.light,
         cardColor: Colors.white,
         backgroundColor: Colors.grey[200],
@@ -43,13 +43,15 @@ class _ApplicationState extends State<Application> {
         colorScheme: ColorScheme.light(
             onPrimary: Colors.black
         ),
-        textTheme: ThemeData.light().textTheme.copyWith(
-          caption: ThemeData.light().textTheme.caption.copyWith(
-            color: Colors.black54,
-            fontSize: 10,
-            fontWeight: FontWeight.w500
-          )
-        )
+        primaryTextTheme: GoogleFonts.latoTextTheme(ThemeData.light().textTheme),
+        accentTextTheme: GoogleFonts.latoTextTheme(ThemeData.light().accentTextTheme),
+        textTheme: GoogleFonts.latoTextTheme(ThemeData.light().textTheme.copyWith(
+            caption: ThemeData.light().textTheme.caption.copyWith(
+                color: Colors.black54,
+                fontSize: 10,
+                fontWeight: FontWeight.w500
+            )
+        ))
       ),
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: Colors.black,
@@ -65,13 +67,15 @@ class _ApplicationState extends State<Application> {
         colorScheme: ColorScheme.dark(
           onPrimary: Colors.white
         ),
-        textTheme: ThemeData.dark().textTheme.copyWith(
+        primaryTextTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme),
+        accentTextTheme: GoogleFonts.latoTextTheme(ThemeData.dark().accentTextTheme),
+        textTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme.copyWith(
             caption: ThemeData.dark().textTheme.caption.copyWith(
-                color: Colors.white54,
+                color: Colors.black54,
                 fontSize: 10,
                 fontWeight: FontWeight.w500
             )
-        )
+        ))
       ),
       themeMode: ThemeMode.system,
       home: MainPage(),

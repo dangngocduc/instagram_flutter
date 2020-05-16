@@ -64,6 +64,11 @@ class _BottomNavPageState extends State<BottomNavPage> {
         color: Theme.of(context).bottomAppBarColor,
         child: SafeArea(
           child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: Divider.createBorderSide(context)
+              )
+            ),
             height: 56,
             child: Row(
               children: <Widget>[
