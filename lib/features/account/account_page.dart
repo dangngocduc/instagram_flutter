@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramflutter/features/account/app_bar_account.dart';
 import 'package:instagramflutter/features/account/tab_bar_sliver_persistent_header_delegate.dart';
 import 'dart:developer' as developer;
 
@@ -17,40 +18,10 @@ class _AccountPageState extends State<AccountPage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: PreferredSize(
-          child: Material(
-            elevation: 4,
-            color: Theme.of(context).primaryColor,
-            child: SafeArea(
-              child: Container(
-                color: Theme.of(context).primaryColor,
-                height: kToolbarHeight,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 8,
-                          horizontal: 12
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Text('dangngocduc', style: Theme.of(context).primaryTextTheme.subtitle2,),
-                          Icon(Icons.keyboard_arrow_down, size: 16,)
-                        ],
-                      ),
-                    ),
-                    IconButton(icon: Icon(Icons.menu), onPressed: (){})
-                  ],
-                ),
-              ),
-            ),
-          ),
-          preferredSize: Size.fromHeight(kToolbarHeight),
-        ),
         body: NestedScrollView(
             headerSliverBuilder: (context, innerBoxIsScrolled) {
               return [
+                AppBarAccount(),
                 SliverToBoxAdapter(
                   child: HeaderAccountWidget(),
                 ),

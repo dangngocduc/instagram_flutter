@@ -5,6 +5,7 @@ import 'big_avatar_user_widget.dart';
 import 'menu_item_widget.dart';
 
 class HeaderAccountWidget extends StatefulWidget {
+
   static const ROUTE_NAME = 'HeaderAccountWidget';
   @override
   _HeaderAccountWidgetState createState() => _HeaderAccountWidgetState();

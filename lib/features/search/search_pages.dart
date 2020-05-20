@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagramflutter/features/explore/explore_page.dart';
 import 'package:instagramflutter/res/icons_app.dart';
 import 'dart:developer' as developer;
 
@@ -68,7 +69,12 @@ class _SearchPagesState extends State<SearchPages> {
           ),
           itemCount: 40,
           itemBuilder: (context, index) {
-            return Image.asset('assets/sample/search_demo1.jpg', fit: BoxFit.cover,);
+            return InkResponse(
+              child: Image.asset('assets/sample/search_demo1.jpg', fit: BoxFit.cover,),
+              onTap: () {
+                Navigator.of(context).pushNamed(ExplorePage.ROUTE_NAME);
+              },
+            );
           }),
     );
 

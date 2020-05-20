@@ -27,21 +27,21 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   void didChangePlatformBrightness() {
     super.didChangePlatformBrightness();
     developer.log('didChangePlatformBrightness Theme.of(context).brightness: ${Theme.of(context).brightness}', name: TAG);
-    if (Theme.of(context).brightness != Brightness.light) {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-          systemNavigationBarColor: Colors.white,
-          statusBarColor: Colors.white,
-          statusBarIconBrightness: Brightness.dark,
-          systemNavigationBarIconBrightness: Brightness.dark
-      ));
-    } else {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-          systemNavigationBarColor: Colors.black,
-          statusBarColor: Colors.black,
-          statusBarIconBrightness: Brightness.light,
-          systemNavigationBarIconBrightness: Brightness.light
-      ));
-    }
+//    if (Theme.of(context).brightness != Brightness.light) {
+//      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+//          systemNavigationBarColor: Colors.white,
+//          statusBarColor: Colors.white,
+//          statusBarIconBrightness: Brightness.dark,
+//          systemNavigationBarIconBrightness: Brightness.dark
+//      ));
+//    } else {
+//      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+//          systemNavigationBarColor: Colors.black,
+//          statusBarColor: Colors.black,
+//          statusBarIconBrightness: Brightness.light,
+//          systemNavigationBarIconBrightness: Brightness.light
+//      ));
+//    }
   }
 
   @override
@@ -49,21 +49,27 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
     super.didChangeDependencies();
     WidgetsBinding.instance.addObserver(this);
     _pageController = PageController(initialPage: 1);
-    if (Theme.of(context).brightness == Brightness.light) {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-        systemNavigationBarColor: Colors.white,
-        statusBarColor: Colors.white,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.dark
-      ));
-    } else {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
         systemNavigationBarColor: Colors.black,
-        statusBarColor: Colors.black,
-        statusBarIconBrightness: Brightness.light,
-        systemNavigationBarIconBrightness: Brightness.light
+        statusBarColor: null,
+        statusBarIconBrightness: null,
+        systemNavigationBarIconBrightness: null
       ));
-    }
+//    if (Theme.of(context).brightness == Brightness.light) {
+//      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+//        systemNavigationBarColor: Colors.white,
+//        statusBarColor: Colors.white,
+//        statusBarIconBrightness: Brightness.dark,
+//        systemNavigationBarIconBrightness: Brightness.dark
+//      ));
+//    } else {
+//      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+//        systemNavigationBarColor: Colors.black,
+//        statusBarColor: Colors.black,
+//        statusBarIconBrightness: Brightness.light,
+//        systemNavigationBarIconBrightness: Brightness.light
+//      ));
+//    }
   }
 
   @override

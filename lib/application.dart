@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:instagramflutter/features/explore/explore_page.dart';
 import 'dart:developer' as developer;
 
 import 'package:instagramflutter/features/main_page.dart';
+import 'package:instagramflutter/features/story/story_page.dart';
 
 class Application extends StatefulWidget {
   static const ROUTE_NAME = 'Application';
@@ -78,7 +81,19 @@ class _ApplicationState extends State<Application> {
         ))
       ),
       themeMode: ThemeMode.system,
-      home: MainPage(),
+      onGenerateRoute: (setting) {
+        switch(setting.name) {
+          case StoryPage.ROUTE_NAME: {
+            return CupertinoPageRoute(builder: (context) => StoryPage());
+          }
+          case ExplorePage.ROUTE_NAME: {
+            return CupertinoPageRoute(builder: (context) => ExplorePage());
+          }
+          default:
+            return CupertinoPageRoute(builder: (context) => MainPage());
+        }
+      },
+      initialRoute: MainPage.ROUTE_NAME,
     );
   }
 }
