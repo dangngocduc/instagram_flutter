@@ -63,7 +63,7 @@ class _ContentInputWidgetState extends State<ContentInputWidget> {
                   icon: SvgPicture.asset(IconsApp.icSend, color: Colors.white),
                   onPressed: (){}),
               IconButton(
-                  icon: Icon(Icons.more_vert),
+                  icon: Icon(Icons.more_vert, color: Colors.white),
                   onPressed: (){})
             ],
           ),
