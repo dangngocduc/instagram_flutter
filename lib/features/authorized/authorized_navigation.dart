@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:developer' as developer;
 
 import 'package:instagramflutter/features/home/home_page.dart';
+import 'package:instagramflutter/features/main_page.dart';
 
 class AuthorizedNavigation extends StatefulWidget {
   static const ROUTE_NAME = 'AuthorizedNavigation';
@@ -15,7 +16,7 @@ class _AuthorizedNavigationState extends State<AuthorizedNavigation> {
   Widget build(BuildContext context) {
     return Navigator(
       onGenerateRoute: (setting) {
-        return MaterialPageRoute(builder: (context) => HomePage());
+        return MaterialPageRoute(builder: (context) => MainPage());
       },
     );
   }
