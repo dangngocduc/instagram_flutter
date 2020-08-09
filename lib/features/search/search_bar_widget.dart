@@ -15,7 +15,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.black,
+      color: Theme.of(context).primaryColor,
       child: SafeArea(child: Container(
         child: Row(
           children: <Widget>[

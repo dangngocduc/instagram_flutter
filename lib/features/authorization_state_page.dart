@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:instagramflutter/data/bloc/auth_bloc.dart';
 import 'package:instagramflutter/features/auth/authorization_navigator.dart';
 import 'package:instagramflutter/features/splash_page.dart';
@@ -16,6 +17,14 @@ class AuthorizationStatePage extends StatefulWidget {
 
 class _AuthorizationStatePageState extends State<AuthorizationStatePage> {
   static const TAG = 'AuthorizationStatePage';
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarIconBrightness: Brightness.light
+    ));
+  }
   @override
   Widget build(BuildContext context) {
     return Consumer<AuthBloc>(

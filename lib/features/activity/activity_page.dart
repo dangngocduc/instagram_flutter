@@ -16,7 +16,10 @@ class _ActivityPageState extends State<ActivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: SearchBarWidget(),
+      appBar: AppBar(
+        title: Text('Activity'),
+        centerTitle: false,
+      ),
       body: RefreshIndicator(
           child: ListView.builder(
             physics: BouncingScrollPhysics(),

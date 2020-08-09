@@ -24,9 +24,12 @@ class ActivityItemWidget extends StatelessWidget {
                   ),
                   child: RichText(text: TextSpan(
                       children: [
-                        TextSpan(text: 'ronsbikes, dangngocduc and world_wildlife', style: Theme.of(context).textTheme.subtitle2),
-                        TextSpan(text: ' Liked your photo.', style: Theme.of(context).textTheme.bodyText2),
-                        TextSpan(text: ' 2h', style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        TextSpan(text: 'ronsbikes, dangngocduc',
+                            style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontWeight: FontWeight.bold
+                            )),
+                        TextSpan(text: ' liked your photo.', style: Theme.of(context).textTheme.subtitle1),
+                        TextSpan(text: ' 2h', style: Theme.of(context).textTheme.subtitle1.copyWith(
                             color: Theme.of(context).colorScheme.onBackground.withOpacity(0.56)
                         ))
                       ]

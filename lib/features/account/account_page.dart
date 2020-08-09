@@ -47,7 +47,7 @@ class _AccountPageState extends State<AccountPage> {
                   GridView.builder(
                       padding: EdgeInsets.all(2),
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 4,
+                          crossAxisCount: 3,
                           crossAxisSpacing: 2,
                           mainAxisSpacing: 2
                       ),
