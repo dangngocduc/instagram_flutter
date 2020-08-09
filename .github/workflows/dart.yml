@@ -25,6 +25,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.19.0-4.3.pre'
+          channel: 'dev'
       - run: flutter pub get
       - run: flutter build apk
       - name: changelog
