@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramflutter/features/search/search_bar_widget.dart';
 import 'dart:developer' as developer;
 
 import 'activity_item_widget.dart';
@@ -15,9 +16,7 @@ class _ActivityPageState extends State<ActivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Activity'),
-      ),
+      appBar: SearchBarWidget(),
       body: RefreshIndicator(
           child: ListView.builder(
             physics: BouncingScrollPhysics(),

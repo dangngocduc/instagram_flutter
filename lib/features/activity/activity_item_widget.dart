@@ -16,7 +16,7 @@ class ActivityItemWidget extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 maxRadius: 16,
-                backgroundImage: NetworkImage('https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-19/s150x150/75223535_449897509288875_4922685218806038528_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_ohc=GyxSNoKXAS8AX_2Hl-b&oh=cf60815eb1effb8d4cc7e68dfc3d844e&oe=5EE2BB7C'),
+                  backgroundImage : AssetImage('assets/sample/ic_avatar_1.jpg')
               ),
               Expanded(child: Container(
                   padding: EdgeInsets.symmetric(

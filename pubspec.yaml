@@ -14,7 +14,8 @@ dependencies:
   google_fonts: ^1.0.0
   flutter_svg: ^0.17.4
   tuple: ^1.0.3
-
+  provider: ^4.3.2
+  async: ^2.4.1
 
 dev_dependencies:
   flutter_test:
