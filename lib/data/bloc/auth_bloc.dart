@@ -11,6 +11,8 @@ class AuthBloc extends ChangeNotifier {
 
   Result<User> user;
 
+//  User get user
+
   AuthBloc() {
     _getUserFromLocal().then((value){
       user = Result.value(value);
@@ -30,7 +32,11 @@ class AuthBloc extends ChangeNotifier {
   ResultFuture<bool> signIn(String username, String password) {
     return ResultFuture<bool>(
       Future.delayed(_defaultDelayResponse, () {
-        user = Result.value(User('dangngocduc.bk@gmail.com', 'dangngocduc'));
+        user = Result.value(User(
+            'dangngocduc.bk@gmail.com',
+            'dangngocduc',
+            'assets/sample/ic_avatar_1.jpg'
+        ));
         notifyListeners();
         return true;
       })

@@ -66,6 +66,16 @@ class _ApplicationState extends State<Application> {
                     color: Colors.black54,
                     fontSize: 10,
                     fontWeight: FontWeight.w500
+                ),
+                bodyText2:  ThemeData.light().textTheme.bodyText2.copyWith(
+                    color: Colors.black,
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold
+                ),
+                bodyText1:  ThemeData.light().textTheme.bodyText1.copyWith(
+                    color: Colors.black,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w400
                 )
             ))
         ),
@@ -81,16 +91,28 @@ class _ApplicationState extends State<Application> {
             backgroundColor: Colors.black54,
             scaffoldBackgroundColor: Color(0xFF121212),
             colorScheme: ColorScheme.dark(
-                onPrimary: Colors.white
+                onPrimary: Colors.white,
+                surface: Colors.black
             ),
+            canvasColor: Colors.black,
             primaryTextTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme),
             accentTextTheme: GoogleFonts.latoTextTheme(ThemeData.dark().accentTextTheme),
             textTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme.copyWith(
                 caption: ThemeData.dark().textTheme.caption.copyWith(
-                    color: Colors.black54,
+                    color: Colors.white54,
                     fontSize: 10,
                     fontWeight: FontWeight.w500
-                )
+                ),
+              bodyText2:  ThemeData.dark().textTheme.bodyText2.copyWith(
+                  color: Colors.white,
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold
+              ),
+              bodyText1:  ThemeData.dark().textTheme.bodyText1.copyWith(
+                  color: Colors.white,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400
+              )
             ))
         ),
         themeMode: ThemeMode.system,

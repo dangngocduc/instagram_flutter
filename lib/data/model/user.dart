@@ -5,7 +5,8 @@ class User {
 
   String email;
   String name;
+  String avatar;
 
-  User(this.email, this.name);
+  User(this.email, this.name, this.avatar);
 
 }
