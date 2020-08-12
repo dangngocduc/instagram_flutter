@@ -8,6 +8,10 @@ import 'package:instagramflutter/features/direct/direct_page.dart';
 import 'package:instagramflutter/res/icons_app.dart';
 
 class HeaderWidget extends StatelessWidget with PreferredSizeWidget {
+  final VoidCallback onCameraClick;
+
+  HeaderWidget(this.onCameraClick);
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -18,7 +22,7 @@ class HeaderWidget extends StatelessWidget with PreferredSizeWidget {
           child: Row(
             children: <Widget>[
               IconButton(icon: SvgPicture.asset(IconsApp.icCamera,
-                color: Theme.of(context).colorScheme.onPrimary,), onPressed: (){}),
+                color: Theme.of(context).colorScheme.onPrimary,), onPressed: onCameraClick),
               Expanded(child: Container(
                 child: SvgPicture.asset(IconsApp.logoInsta,
                   color: Theme.of(context).colorScheme.onPrimary,),

@@ -12,6 +12,11 @@ import 'bottom_navigation_item.dart';
 
 class BottomNavPage extends StatefulWidget {
   static const ROUTE_NAME = 'BottomNavPage';
+
+  final VoidCallback onCameraClick;
+
+  BottomNavPage(this.onCameraClick);
+
   @override
   _BottomNavPageState createState() => _BottomNavPageState();
 }
@@ -53,7 +58,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
           }
         },
         children: <Widget>[
-          HomePage(),
+          HomePage(widget.onCameraClick),
           SearchPages(),
           ActivityPage(),
           AccountPage()

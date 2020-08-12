@@ -7,6 +7,11 @@ import 'header_widget.dart';
 
 class HomePage extends StatefulWidget {
   static const ROUTE_NAME = 'HomePage';
+
+  final VoidCallback onCameraClick;
+
+  HomePage(this.onCameraClick);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -16,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HeaderWidget(),
+      appBar: HeaderWidget(widget.onCameraClick),
       body: RefreshIndicator(
           child: SingleChildScrollView(
             child: Column(

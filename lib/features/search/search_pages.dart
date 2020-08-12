@@ -72,7 +72,9 @@ class _SearchPagesState extends State<SearchPages> {
             return InkResponse(
               child: Image.asset('assets/sample/search_demo1.jpg', fit: BoxFit.cover,),
               onTap: () {
-                Navigator.of(context).pushNamed(ExplorePage.ROUTE_NAME);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ExplorePage())
+                );
               },
             );
           }),

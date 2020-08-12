@@ -17,6 +17,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   static const TAG = 'MainPage';
   PageController _pageController;
+  int currentPage = 1;
   @override
   void initState() {
     super.initState();
@@ -26,21 +27,45 @@ class _MainPageState extends State<MainPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _pageController = PageController(initialPage: 1);
+    _pageController = PageController(initialPage: currentPage);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(
-        physics: NeverScrollableScrollPhysics(),
-        controller: _pageController,
-        children: <Widget>[
-          CameraPge(),
-          BottomNavPage(),
-          DirectPage(),
-        ],
-      ),
-    );
+    return WillPopScope(
+        child: Scaffold(
+          body: PageView(
+            physics: NeverScrollableScrollPhysics(),
+            controller: _pageController,
+            onPageChanged: (current) {
+              currentPage = current;
+            },
+            children: <Widget>[
+              CameraPge(() {
+                _pageController.animateToPage(
+                    1,
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeIn);
+              }),
+              BottomNavPage(() {
+                _pageController.animateToPage(
+                    0,
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeIn);
+              }),
+            ],
+          ),
+        ),
+        onWillPop: () async {
+          if (currentPage == 0) {
+            _pageController.animateToPage(
+                1,
+                duration: Duration(milliseconds: 300),
+                curve: Curves.easeIn);
+            return false;
+          } else {
+            return true;
+          }
+        });
   }
 }

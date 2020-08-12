@@ -13,23 +13,30 @@ class AuthorizedNavigation extends StatefulWidget {
 
 class _AuthorizedNavigationState extends State<AuthorizedNavigation> {
   static const TAG = 'AuthorizedNavigation';
+
+  GlobalKey<NavigatorState> navigator = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    return Navigator(
-      onGenerateRoute: (setting) {
-        switch(setting.name) {
-          case CommentPage.ROUTE_NAME:
-            return MaterialPageRoute(
-                builder: (context) => CommentPage(
-                  setting.arguments
-                ),
-                settings: setting
-            );
-          default:
-            return MaterialPageRoute(builder: (context) => MainPage());
-        }
-      },
-      initialRoute: MainPage.ROUTE_NAME,
-    );
+    return WillPopScope(
+        child: Navigator(
+          key: navigator,
+          onGenerateRoute: (setting) {
+            switch(setting.name) {
+              case CommentPage.ROUTE_NAME:
+                return MaterialPageRoute(
+                    builder: (context) => CommentPage(
+                        setting.arguments
+                    ),
+                    settings: setting
+                );
+              default:
+                return MaterialPageRoute(builder: (context) => MainPage());
+            }
+          },
+          initialRoute: MainPage.ROUTE_NAME,
+        ),
+        onWillPop: () async {
+          return !(await navigator.currentState.maybePop());
+        });
   }
 }

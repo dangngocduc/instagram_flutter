@@ -34,7 +34,7 @@ class _HeaderAccountWidgetState extends State<HeaderAccountWidget> {
                     BigAvatarUserWidget(),
                     Padding(
                       padding: EdgeInsets.only(top: 8),
-                      child: Text('Đặng Ngọc Đức', style: Theme.of(context).textTheme.bodyText1,),
+                      child: Text('Đặng Ngọc Đức', style: Theme.of(context).textTheme.bodyText2,),
                     )
                   ],
                 ),
@@ -54,9 +54,10 @@ class _HeaderAccountWidgetState extends State<HeaderAccountWidget> {
             ),
           ),
           Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 16
-              ),
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
             child: Text('Mastering B&W: The Art of B&W \nEditor: @dangngocduc Mod: @dangngocduc @dangngocduc \nFounder: @dangngocduc',
               style: Theme.of(context).textTheme.bodyText1,),
           ),

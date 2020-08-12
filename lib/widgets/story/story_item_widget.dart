@@ -57,7 +57,9 @@ class _StoryItemWidgetState extends State<StoryItemWidget> {
         fit: BoxFit.scaleDown,
       ),
       onTap: () {
-        Navigator.of(context).pushNamed(StoryPage.ROUTE_NAME);
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => StoryPage(),
+        ));
       },
     );
   }
