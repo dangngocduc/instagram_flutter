@@ -4,9 +4,10 @@ class User {
   static const TAG = 'User';
 
   String email;
-  String name;
+  String username;
   String avatar;
+  String fullName;
 
-  User(this.email, this.name, this.avatar);
+  User(this.email, this.username, this.avatar, this.fullName);
 
 }

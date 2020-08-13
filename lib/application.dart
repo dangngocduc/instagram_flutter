@@ -1,17 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:instagramflutter/data/bloc/auth_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:instagramflutter/features/explore/explore_page.dart';
-import 'dart:developer' as developer;
-
-import 'package:instagramflutter/features/main_page.dart';
-import 'package:instagramflutter/features/story/story_page.dart';
+import 'package:instagramflutter/data/bloc/auth_bloc.dart';
+import 'package:instagramflutter/data/bloc/chat_bloc.dart';
+import 'package:provider/provider.dart';
 
 import 'features/authorization_state_page.dart';
-import 'features/splash_page.dart';
+
+import 'dart:developer' as developer;
 
 class Application extends StatefulWidget {
   static const ROUTE_NAME = 'Application';
@@ -25,7 +22,7 @@ class _ApplicationState extends State<Application> {
   @override
   void initState() {
     super.initState();
-
+    developer.log('initState', name: TAG);
   }
   @override
   Widget build(BuildContext context) {
@@ -35,6 +32,12 @@ class _ApplicationState extends State<Application> {
             create: (context) {
                 return AuthBloc();
               },
+        ),
+        ChangeNotifierProvider(
+            create: (context) {
+              return ChatBloc();
+            },
+            lazy: false,
         )
       ],
       child: MaterialApp(
@@ -47,6 +50,10 @@ class _ApplicationState extends State<Application> {
             accentIconTheme: IconThemeData(
                 color: Colors.black
             ),
+            appBarTheme: AppBarTheme(
+              brightness: Brightness.light,
+              elevation: 1
+            ),
             primaryColorBrightness: Brightness.light,
             primaryColorDark: Colors.black87,
             primaryIconTheme: IconThemeData(
@@ -55,7 +62,7 @@ class _ApplicationState extends State<Application> {
             brightness: Brightness.light,
             cardColor: Colors.white,
             backgroundColor: Colors.grey[200],
-            scaffoldBackgroundColor: Colors.grey[200],
+            scaffoldBackgroundColor: Colors.white,
             colorScheme: ColorScheme.light(
                 onPrimary: Colors.black
             ),

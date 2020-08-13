@@ -63,7 +63,7 @@ class _CommentPageState extends State<CommentPage> {
                     padding: EdgeInsets.only(left: 16, right: 8),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Comment as ${context.watch<AuthBloc>().user.asValue.value.name}...',
+                        hintText: 'Comment as ${context.watch<AuthBloc>().user.asValue.value.username}...',
                         border: InputBorder.none
                       ),
                     ),

@@ -35,7 +35,8 @@ class AuthBloc extends ChangeNotifier {
         user = Result.value(User(
             'dangngocduc.bk@gmail.com',
             'dangngocduc',
-            'assets/sample/ic_avatar_1.jpg'
+            'assets/sample/ic_avatar_1.jpg',
+            'Dang Ngoc Duc'
         ));
         notifyListeners();
         return true;

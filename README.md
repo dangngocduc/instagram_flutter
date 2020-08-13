@@ -13,5 +13,6 @@
 |![](./demo/explore_page_dark.png)|![](./demo/explore_page_light.png)|
 |![](./demo/story_page.png)|![](./demo/account_page_dark.png)|
 |![](./demo/comment_page_dark.jpg)|![](./demo/comment_page_light.jpg)|
+|![](./demo/direct_page_dark.jpg)|![](./demo/direct_page_light.jpg)|
 
 
