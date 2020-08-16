@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:instagramflutter/features/account/account_page.dart';
 import 'package:instagramflutter/features/activity/activity_page.dart';
 import 'package:instagramflutter/features/home/home_page.dart';
+import 'package:instagramflutter/features/post/post_page.dart';
 import 'package:instagramflutter/features/search/search_pages.dart';
 import 'package:instagramflutter/res/icons_app.dart';
 import 'package:tuple/tuple.dart';
@@ -101,9 +102,9 @@ class _BottomNavPageState extends State<BottomNavPage> {
                     tabsIcons[2],
                     2 == _currentTabIndex,
                     onPress: () {
-                      setState(() {
-                        _currentTabIndex = 2;
-                      });
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => PostPage())
+                      );
                     }
                 )),
                 Expanded(child: BottomNavigationItem(

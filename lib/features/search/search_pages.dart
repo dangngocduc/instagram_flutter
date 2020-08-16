@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagramflutter/data/bloc/local_media_bloc.dart';
 import 'package:instagramflutter/features/explore/explore_page.dart';
 import 'package:instagramflutter/res/icons_app.dart';
+import 'package:provider/provider.dart';
 import 'dart:developer' as developer;
 
 import 'package:instagramflutter/widgets/chip_widget.dart';
@@ -67,10 +69,10 @@ class _SearchPagesState extends State<SearchPages> {
             crossAxisSpacing: 2,
             mainAxisSpacing: 2
           ),
-          itemCount: 40,
+          itemCount: context.watch<LocalMediaBloc>().files.length*6,
           itemBuilder: (context, index) {
             return InkResponse(
-              child: Image.asset('assets/sample/search_demo1.jpg', fit: BoxFit.cover,),
+              child: Image.asset(context.watch<LocalMediaBloc>().files[index%8], fit: BoxFit.cover,),
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => ExplorePage())

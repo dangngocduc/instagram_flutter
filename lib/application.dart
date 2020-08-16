@@ -6,6 +6,7 @@ import 'package:instagramflutter/data/bloc/auth_bloc.dart';
 import 'package:instagramflutter/data/bloc/chat_bloc.dart';
 import 'package:provider/provider.dart';
 
+import 'data/bloc/local_media_bloc.dart';
 import 'features/authorization_state_page.dart';
 
 import 'dart:developer' as developer;
@@ -35,6 +36,12 @@ class _ApplicationState extends State<Application> {
         ),
         ChangeNotifierProvider(
             create: (context) {
+              return LocalMediaBloc();
+            },
+            lazy: false,
+        ),
+        ChangeNotifierProvider(
+            create: (context) {
               return ChatBloc();
             },
             lazy: false,
@@ -46,6 +53,7 @@ class _ApplicationState extends State<Application> {
             primaryColor: Colors.white,
             accentColor: Colors.black,
             accentColorBrightness: Brightness.dark,
+            toggleableActiveColor: Colors.blue[900],
             bottomAppBarColor: Colors.white,
             accentIconTheme: IconThemeData(
                 color: Colors.black
@@ -90,6 +98,7 @@ class _ApplicationState extends State<Application> {
             primaryColor: Colors.black,
             accentColor: Colors.white,
             accentColorBrightness: Brightness.light,
+            toggleableActiveColor: Colors.blue[900],
             bottomAppBarColor: Colors.black87,
             accentIconTheme: IconThemeData(
                 color: Colors.white
