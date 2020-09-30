@@ -131,7 +131,7 @@ class _ApplicationState extends State<Application> {
               )
             ))
         ),
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         home: AuthorizationStatePage(),
       ),
     );

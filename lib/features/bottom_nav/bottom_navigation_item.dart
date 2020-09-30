@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:developer' as developer;
@@ -27,7 +28,10 @@ class _BottomNavigationItemState extends State<BottomNavigationItem> {
             vertical: 4,
             horizontal: 8
         ),
-        child: SvgPicture.asset(
+        child: kIsWeb ? Image.network(
+          widget.isSelected ? widget.icon.item2 : widget.icon.item1,
+          color: Theme.of(context).colorScheme.onPrimary,
+        ) : SvgPicture.asset(
           widget.isSelected ? widget.icon.item2 : widget.icon.item1,
           color: Theme.of(context).colorScheme.onPrimary,
         ),

@@ -15,6 +15,15 @@ class SettingPostPage extends StatefulWidget {
 class _SettingPostPageState extends State<SettingPostPage> {
   static const TAG = 'SettingPostPage';
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    ModalRoute.of(context).overlayEntries.forEach((element) {
+
+    });
+  }
+
+
+  @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
         create: (context) => PostCreateViewModel(),
