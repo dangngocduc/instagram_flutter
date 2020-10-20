@@ -36,7 +36,7 @@ class DirectItemWidget extends StatelessWidget {
             ),
           ),
           IconButton(
-              icon: Icon(Icons.camera_alt_outlined),
+              icon: Icon(Icons.camera_alt),
               onPressed: (){},
           )
         ],

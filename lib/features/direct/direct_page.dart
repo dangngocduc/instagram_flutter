@@ -21,7 +21,7 @@ class _DirectPageState extends State<DirectPage> {
         title: Text(context.watch<AuthBloc>().user.asValue.value.username),
         actions: [
           IconButton(
-            icon: Icon(Icons.video_call_outlined),
+            icon: Icon(Icons.video_call),
             onPressed: (){},)
         ],
 

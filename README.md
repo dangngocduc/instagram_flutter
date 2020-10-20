@@ -16,5 +16,7 @@
 |![](./demo/direct_page_dark.jpg)|![](./demo/direct_page_light.jpg)|
 |![](./demo/create_post_page_dark.jpg)|![](./demo/create_post_page_light.jpg)|
 |![](./demo/setting_post_page_dark.jpg)|![](./demo/setting_post_page_light.jpg)|
+|![](demo/account_bottom_sheet_dark.png)|![](./demo/account_bottom_sheet_light.png)|
+|![](demo/feed_menu_dark.png)|![](./demo/feed_menu_light.png)|
 
 

@@ -2,13 +2,15 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagramflutter/app_context.dart';
 
 class AppBarAccountDelegate extends SliverPersistentHeaderDelegate {
   static const TAG = 'AppBarAccount';
 
   final double topPadding;
+  final VoidCallback onShowMenu;
 
-  AppBarAccountDelegate(this.topPadding);
+  AppBarAccountDelegate(this.topPadding, this.onShowMenu);
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -33,7 +35,10 @@ class AppBarAccountDelegate extends SliverPersistentHeaderDelegate {
                 ],
               ),
             ),
-            IconButton(icon: Icon(Icons.menu), onPressed: (){})
+            IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: onShowMenu,
+            )
           ],
         ),
       ),

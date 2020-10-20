@@ -70,6 +70,7 @@ class _ApplicationState extends State<Application> {
             brightness: Brightness.light,
             cardColor: Colors.white,
             backgroundColor: Colors.grey[200],
+            dialogBackgroundColor: Colors.white,
             scaffoldBackgroundColor: Colors.white,
             colorScheme: ColorScheme.light(
                 onPrimary: Colors.black
@@ -105,6 +106,7 @@ class _ApplicationState extends State<Application> {
             ),
             cardColor: Color(0xFF121212),
             backgroundColor: Colors.black54,
+            dialogBackgroundColor: Color(0xFF121212),
             scaffoldBackgroundColor: Color(0xFF121212),
             colorScheme: ColorScheme.dark(
                 onPrimary: Colors.white,
@@ -131,7 +133,7 @@ class _ApplicationState extends State<Application> {
               )
             ))
         ),
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.light,
         home: AuthorizationStatePage(),
       ),
     );

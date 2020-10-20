@@ -35,7 +35,36 @@ class HeaderWidget extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: (){},
+            onPressed: (){
+              showDialog(
+                useRootNavigator: false,
+                context: context,
+                child: Dialog(
+                  child: ListView(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 16
+                    ),
+                    shrinkWrap: true,
+                    children: [
+                      'Report...', 'Turn on Post notification', 'Copy Link', 'Share to...', 'Mute'
+                    ].map(
+                            (e) => InkWell(
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 12,
+                                    horizontal: 16
+                                ),
+                                child: Text(e),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                            )
+                    ).toList()
+                  ),
+                )
+              );
+            },
             icon: Icon(Icons.more_vert),
           )
         ],

@@ -54,7 +54,7 @@ class CommentWidget extends StatelessWidget {
           )),
           Container(
             padding: EdgeInsets.all(8),
-            child: Icon(Icons.favorite_outline, size: 16,),
+            child: Icon(Icons.favorite, size: 16,),
           )
         ],
       ),
