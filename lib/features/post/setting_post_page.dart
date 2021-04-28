@@ -17,7 +17,7 @@ class _SettingPostPageState extends State<SettingPostPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    ModalRoute.of(context).overlayEntries.forEach((element) {
+    ModalRoute.of(context)!.overlayEntries.forEach((element) {
 
     });
   }
@@ -38,7 +38,7 @@ class _SettingPostPageState extends State<SettingPostPage> {
                       onPressed: (){
                         Navigator.popUntil(context, (route) => route.isFirst);
                       },
-                      child: Text('Share', style: Theme.of(context).primaryTextTheme.subtitle1.copyWith(
+                      child: Text('Share', style: Theme.of(context).primaryTextTheme.subtitle1?.copyWith(
                           color: Colors.blue
                       ),))
                 ],

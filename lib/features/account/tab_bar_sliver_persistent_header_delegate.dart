@@ -8,7 +8,7 @@ class TabBarSliverPersistentHeaderDelegate extends SliverPersistentHeaderDelegat
 
   Widget child;
 
-  TabBarSliverPersistentHeaderDelegate({this.child});
+  TabBarSliverPersistentHeaderDelegate({required this.child});
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {

@@ -10,8 +10,8 @@ class BottomSheetAction {
   int id;
 
   BottomSheetAction({
-    @required this.iconData,
-    @required this.title,
-    @required int id,
+    required this.iconData,
+    required this.title,
+    required this.id,
   });
 }

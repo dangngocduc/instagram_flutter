@@ -14,7 +14,7 @@ extension AppContext on BuildContext {
   TextTheme get textTheme => Theme.of(this).textTheme;
 
 
-  Future<BottomSheetAction> showBottomSheet(List<BottomSheetAction> actions) {
+  Future<BottomSheetAction?> showBottomSheet(List<BottomSheetAction> actions) {
     return showModalBottomSheet(
         context: this,
         backgroundColor: Colors.transparent,

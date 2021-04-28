@@ -21,7 +21,7 @@ class _WriteCaptionWidgetState extends State<WriteCaptionWidget> {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(context.watch<AuthBloc>().user.asValue.value.avatar),
+            backgroundImage: AssetImage(context.watch<AuthBloc>().user!.asValue!.value!.avatar),
           ),
           Expanded(
               child: Padding(
@@ -30,7 +30,7 @@ class _WriteCaptionWidgetState extends State<WriteCaptionWidget> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Write a caption',
-                    hintStyle: Theme.of(context).textTheme.bodyText1.copyWith(
+                    hintStyle: Theme.of(context).textTheme.bodyText1?.copyWith(
                       color: Theme.of(context).hintColor
                     )
                   ),

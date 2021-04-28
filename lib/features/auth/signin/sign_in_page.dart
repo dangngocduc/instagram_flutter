@@ -15,7 +15,7 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   static const TAG = 'SignInPage';
-  ResultFuture<bool> singingFuture;
+  ResultFuture<bool>? singingFuture;
   @override
   Widget build(BuildContext context) {
     final inputBorder =
@@ -76,13 +76,13 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 InkWell(
                   child: Container(
-                    child: (singingFuture == null || singingFuture.isComplete)
+                    child: (singingFuture == null || singingFuture!.isComplete)
                         ? Text(
                             'Sign in',
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyText1
-                                .copyWith(color: Colors.white),
+                                ?.copyWith(color: Colors.white),
                           )
                         : CupertinoActivityIndicator(),
                     width: double.infinity,
@@ -114,7 +114,7 @@ class _SignInPageState extends State<SignInPage> {
                   style: Theme.of(context)
                       .textTheme
                       .bodyText1
-                      .copyWith(fontSize: 10),
+                      ?.copyWith(fontSize: 10),
                 ),
                 Flexible(
                   child: Container(),
@@ -131,7 +131,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
         ),
-        ignoring: singingFuture != null && !singingFuture.isComplete,
+        ignoring: singingFuture != null && !singingFuture!.isComplete,
       ),
     );
   }

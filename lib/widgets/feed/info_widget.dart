@@ -23,7 +23,7 @@ class InfoWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           DefaultTextStyle(
-              style: Theme.of(context).textTheme.subtitle2.copyWith(
+              style: Theme.of(context).textTheme.subtitle2!.copyWith(
                 fontWeight: FontWeight.w800
               ),
               child: Text('1,102 likes', style: Theme.of(context).textTheme.bodyText2,)),
@@ -37,7 +37,7 @@ class InfoWidget extends StatelessWidget {
                 children: [
                   TextSpan(text: 'dangngocduc', style: Theme.of(context).textTheme.bodyText2),
                   TextSpan(text: '  how to rear mount pec dec instal slideshow. Note: the hite-rite v1 dropper post makes for a great linkage point for extra strap when overloading 🚚 :: fabs chest pre order june 1st :::..',
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
+                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         fontWeight: FontWeight.w400
                       )),
                 ]

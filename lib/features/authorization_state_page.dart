@@ -32,7 +32,7 @@ class _AuthorizationStatePageState extends State<AuthorizationStatePage> {
           if (bloc.user == null) {
             return SplashPage();
           } else {
-            if (bloc.user.asValue.value == null) {
+            if (bloc.user?.asValue?.value == null) {
               return AuthorizationNavigator();
             } else {
               return AuthorizedNavigation();

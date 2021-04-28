@@ -50,7 +50,7 @@ class _ContentInputWidgetState extends State<ContentInputWidget> {
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Send message',
-                            hintStyle: Theme.of(context).textTheme.subtitle1.copyWith(
+                            hintStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
                               color: Colors.white54
                             ),
                             suffixIcon: Icon(Icons.insert_emoticon, color: Colors.white,)

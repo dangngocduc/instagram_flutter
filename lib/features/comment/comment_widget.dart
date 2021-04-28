@@ -34,7 +34,7 @@ class CommentWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: 4),
                     child: DefaultTextStyle(
-                        style: Theme.of(context).textTheme.caption.copyWith(
+                        style: Theme.of(context).textTheme.caption!.copyWith(
                           fontSize: 12,
                           fontWeight: FontWeight.w400
                         ),

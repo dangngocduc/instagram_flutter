@@ -9,7 +9,7 @@ const Duration _defaultDelayResponse = Duration(seconds: 2);
 class AuthBloc extends ChangeNotifier {
   static const TAG = 'AuthBloc';
 
-  Result<User> user;
+  Result<User?>? user;
 
 //  User get user
 
@@ -23,7 +23,7 @@ class AuthBloc extends ChangeNotifier {
   ///
   /// Fetch user from local SharePreference
   Future _getUserFromLocal() async {
-    return Future<bool>.delayed(_defaultDelayResponse, () async {
+    return Future<bool?>.delayed(_defaultDelayResponse, () async {
       return null;
     });
   }

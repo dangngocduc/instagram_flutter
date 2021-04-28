@@ -25,7 +25,7 @@ class _AuthorizedNavigationState extends State<AuthorizedNavigation> {
               case CommentPage.ROUTE_NAME:
                 return MaterialPageRoute(
                     builder: (context) => CommentPage(
-                        setting.arguments
+                        setting.arguments as String
                     ),
                     settings: setting
                 );
@@ -36,7 +36,7 @@ class _AuthorizedNavigationState extends State<AuthorizedNavigation> {
           initialRoute: MainPage.ROUTE_NAME,
         ),
         onWillPop: () async {
-          return !(await navigator.currentState.maybePop());
+          return !(await navigator.currentState!.maybePop());
         });
   }
 }

@@ -8,7 +8,7 @@ import 'package:instagramflutter/data/model/user.dart';
 class ChatBloc extends ChangeNotifier {
   static const TAG = 'ChatBloc';
 
-  List<Conversation> conversation;
+  late List<Conversation> conversation;
 
   ChatBloc() {
     //region Fake Data

@@ -33,7 +33,7 @@ class _PostPageState extends State<PostPage> {
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPostPage()));
               },
-              child: Text('Next', style: Theme.of(context).primaryTextTheme.subtitle1.copyWith(
+              child: Text('Next', style: Theme.of(context).primaryTextTheme.subtitle1?.copyWith(
                 color: Colors.blue
               ),))
         ],

@@ -31,7 +31,7 @@ class _StoryItemWidgetState extends State<StoryItemWidget> {
                         Container(
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
-                                colors: [Colors.red[500], Colors.pink],
+                                colors: [Colors.red[500]!, Colors.pink],
                               )
                           ),
                           padding: EdgeInsets.all(2),
@@ -47,7 +47,7 @@ class _StoryItemWidgetState extends State<StoryItemWidget> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 4),
-                child: Text('dangngocduc', style: Theme.of(context).textTheme.caption.copyWith(
+                child: Text('dangngocduc', style: Theme.of(context).textTheme.caption?.copyWith(
                     color: Theme.of(context).colorScheme.onBackground
                 ),),
               )

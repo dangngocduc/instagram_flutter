@@ -54,7 +54,7 @@ class _CommentPageState extends State<CommentPage> {
               children: [
                 CircleAvatar(
                   backgroundImage: AssetImage(
-                    context.watch<AuthBloc>().user.asValue.value.avatar
+                    context.watch<AuthBloc>().user!.asValue!.value!.avatar
                   ),
                   radius: 18,
                 ),
@@ -63,7 +63,7 @@ class _CommentPageState extends State<CommentPage> {
                     padding: EdgeInsets.only(left: 16, right: 8),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Comment as ${context.watch<AuthBloc>().user.asValue.value.username}...',
+                        hintText: 'Comment as ${context.watch<AuthBloc>().user!.asValue!.value!.username}...',
                         border: InputBorder.none
                       ),
                     ),
@@ -76,7 +76,7 @@ class _CommentPageState extends State<CommentPage> {
                             vertical: 8,
                             horizontal: 8
                         ),
-                      child: Text('Post', style: Theme.of(context).primaryTextTheme.bodyText2.copyWith(
+                      child: Text('Post', style: Theme.of(context).primaryTextTheme.bodyText2?.copyWith(
                         color: Colors.blue
                       ),),
                     ),

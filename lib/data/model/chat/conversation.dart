@@ -12,7 +12,7 @@ class Conversation {
   DateTime lastActive;
 
   Conversation({
-    this.user, this.isActive, this.lastActive
+    required this.user, required this.isActive, required this.lastActive
   });
 
 }

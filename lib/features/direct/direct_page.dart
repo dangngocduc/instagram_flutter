@@ -18,7 +18,7 @@ class _DirectPageState extends State<DirectPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.watch<AuthBloc>().user.asValue.value.username),
+        title: Text(context.watch<AuthBloc>().user!.asValue!.value!.username),
         actions: [
           IconButton(
             icon: Icon(Icons.video_call),

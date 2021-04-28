@@ -3,19 +3,19 @@ description: A new Flutter application.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^1.0.0
-  flutter_svg: ^0.18.0
-  tuple: ^1.0.3
-  provider: ^4.3.2
-  async: ^2.4.1
+  google_fonts: ^2.0.0
+  flutter_svg: ^0.22.0
+  tuple: ^2.0.0
+  provider: ^5.0.0
+  async: ^2.5.0
 
 dev_dependencies:
   flutter_test:

@@ -31,7 +31,7 @@ class ChipWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 8),
             child: DefaultTextStyle(
-                style: Theme.of(context).primaryTextTheme.bodyText2.copyWith(
+                style: Theme.of(context).primaryTextTheme.bodyText2!.copyWith(
                   fontWeight: FontWeight.w600
                 ),
                 child: label),

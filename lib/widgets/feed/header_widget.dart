@@ -27,7 +27,7 @@ class HeaderWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   DefaultTextStyle(
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyText2!,
                       child: Text('dangngocduc'),),
                   Text('Ha Noi, Viet Nam', style: Theme.of(context).textTheme.caption,)
                 ],
@@ -39,16 +39,17 @@ class HeaderWidget extends StatelessWidget {
               showDialog(
                 useRootNavigator: false,
                 context: context,
-                child: Dialog(
-                  child: ListView(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 16
-                    ),
-                    shrinkWrap: true,
-                    children: [
-                      'Report...', 'Turn on Post notification', 'Copy Link', 'Share to...', 'Mute'
-                    ].map(
-                            (e) => InkWell(
+                builder: (context) {
+                  return Dialog(
+                    child: ListView(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 16
+                        ),
+                        shrinkWrap: true,
+                        children: [
+                          'Report...', 'Turn on Post notification', 'Copy Link', 'Share to...', 'Mute'
+                        ].map(
+                                (e) => InkWell(
                               child: Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 12,
@@ -60,9 +61,10 @@ class HeaderWidget extends StatelessWidget {
                                 Navigator.pop(context);
                               },
                             )
-                    ).toList()
-                  ),
-                )
+                        ).toList()
+                    ),
+                  );
+                },
               );
             },
             icon: Icon(Icons.more_vert),

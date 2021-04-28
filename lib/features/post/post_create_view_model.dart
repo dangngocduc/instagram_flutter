@@ -7,7 +7,7 @@ class PostCreateViewModel extends ChangeNotifier {
 
   List<String> locationSuggest = ['Ha Noi', 'Bac Ninh', 'Hai Phong', 'Bac Giang', 'Que Vo'];
 
-  String currentLocation;
+  String? currentLocation;
 
   bool isShareFacebook = false;
 
@@ -15,7 +15,7 @@ class PostCreateViewModel extends ChangeNotifier {
 
   bool isShareTumblr = false;
 
-  void setCurrentLocation(String location) {
+  void setCurrentLocation(String? location) {
     currentLocation = location;
     notifyListeners();
   }

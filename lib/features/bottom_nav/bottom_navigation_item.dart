@@ -9,7 +9,7 @@ class BottomNavigationItem extends StatefulWidget {
   static const ROUTE_NAME = 'BottomNavigationItem';
 
   final Tuple2<String, String> icon;
-  final VoidCallback onPress;
+  final VoidCallback? onPress;
   final bool isSelected;
   BottomNavigationItem(this.icon, this.isSelected, {this.onPress});
 

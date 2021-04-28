@@ -16,7 +16,7 @@ class AccountPage extends StatefulWidget {
 class _AccountPageState extends State<AccountPage> {
   static const TAG = 'AccountPage';
 
-  VoidCallback _onShowMenu;
+  late VoidCallback _onShowMenu;
 
   @override
   void initState() {
